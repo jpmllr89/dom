@@ -1,9 +1,10 @@
 /* navBar */
 
-nav{
-  width: 100%;
-  justify-content: space-between;
+.navbar{
+  display: flex;
+  flex-flow: row nowrap;
   align-items: center;
+  width: 100%;
   padding: 0.5rem 1rem;
 }
 
@@ -12,9 +13,19 @@ font-size: 22px;
 }
 
 .nav-links{
+  margin-left: auto;
 padding: 0 15px;
 }
 
+.nav-links ul{
+  display: flex;
+  flex-direction: row;
+}
+
 .nav-item{
-padding: 0 10px;
+padding: 18px;
+font-size: 15px;
+line-height: 26px;
+text-transform: lowercase;
+cursor: pointer;
 }

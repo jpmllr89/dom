@@ -97,13 +97,3 @@ button:not(:disabled):not(.disabled){
 .round-pill{
   border-radius: 50rem;
 }
-
-.row{
-  display: flex;
-  flex-direction: row;
-}
-
-.col{
-  display: flex;
-  flex-direction: column;
-}
