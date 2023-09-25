@@ -29,3 +29,61 @@ line-height: 26px;
 text-transform: lowercase;
 cursor: pointer;
 }
+
+/* About me modal */
+
+.full-site-modal{
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 1rem;
+  transition: all 0.35s ease-in;
+  visibility: hidden;
+  opacity: 0;
+}
+
+.modal-header{
+  display: flex;
+  padding-bottom: 1rem;
+  justify-content: space-between;
+  padding: 0 20px;
+}
+
+.modal-header .fa-times{
+  transition: all .5s ease-in;
+  font-size: 1.5rem;
+}
+
+.modal-header .fa-times:hover{
+  transition: scale(1.5);
+  cursor: pointer;
+}
+
+.full-site-modal.is-visible{
+  visibility: visible;
+  opacity: 1;
+}
+
+.modal-body{
+  display: flex;
+  flex-flow: row nowrap;
+  gap: 150px;
+  justify-content: center;
+  align-items: center;
+}
+.modal-body .img-wrapper img{
+  width: 300px;
+  height: 300px;
+  border-radius: 50rem;
+}
+
+[data-animation="zoomInOut"].full-site-modal{
+  transform: scale(0.2);
+}
+
+[data-animation="zoomInOut"].full-site-modal.is-visible{
+  transform: scale(1);
+}
+

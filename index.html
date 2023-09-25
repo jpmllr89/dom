@@ -22,29 +22,33 @@
         <div class="nav-links">
           <ul class="ul-no-bullets">
             <li><a href="/" class="nav-item">Home</a></li>
-            <li><a href="/" class="nav-item">About Me</a></li>
-            <li><a href="/" class="nav-item">Contact</a></li>
+            <li><a href="/" class="nav-item" data-open="about">About Me</a></li>
+            <li><a href="/" class="nav-item" data-open="contact">Contact</a></li>
           </ul>
         </div>
       </nav>
     </header>
   </main>
   <!-- modals go under/outside of the main -->
-  <div>
-    <header>
+  <div class="full-site-modal page-block" id="about" data-animation="zoomInOut">
+    <header class="modal-header">
       <h3>About</h3>
       <i class="fas fa-times"></i>
     </header>
     <div class="modal-body">
-      <div class="image-wrapper">
-        <img src="" alt="">
+      <div class="img-wrapper">
+        <img src="assets/img/week 8 image assets/cube.png" alt="">
       </div>
-      <div class="text-box">
+      <div class="text-body">
         <h2>Jesse Miller</h2>
-        <p>text 1</p>
-        <p>text 2</p>
-        <div>Email Me:</div>
-        <a href="mailto:jpmllr89@gmail.com">jpmllr89@gmail.com</a>
+        <p>Text 1</p>
+        <p>Text 2</p>
+        <div class="email">
+          <h3>
+            Email Me:
+          </h3>
+          <a href="mailto:jpmllr89@gmail.com">jpmllr89@gmail.com</a>
+        </div>
       </div>
     </div>
   </div>
