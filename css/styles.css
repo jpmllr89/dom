@@ -131,3 +131,28 @@ cursor: pointer;
 input:focus, textarea:focus{
   outline: none;
 }
+
+
+/* hero section */
+
+.hero{
+  height: 500px;
+}
+
+.hero-text{
+  text-align: center;
+  margin-top: 5px;
+}
+.hero-text i{
+  font-size: 38px;
+  background-color: #d93d11;
+  padding: 20px 15px;
+  border-radius: 50%;
+}
+
+.hero-text a{
+  width: 20%;
+  margin: 0 auto;
+  border-radius: 10px;
+}
+

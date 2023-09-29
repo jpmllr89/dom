@@ -8,3 +8,10 @@
   --border: #383f53;
   
 }
+
+.hero-bg{
+  background-image: url('../assets/img/week\ 8\ image\ assets/hero-pattern.webp');
+  background-repeat: none;
+  background-position: center;
+  background-size: cover;
+}
