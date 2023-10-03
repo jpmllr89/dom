@@ -6,10 +6,19 @@
   --color-text: #161c2d;
   --color-text-base: #161c2d;
   --border: #383f53;
-  
 }
 
-.hero-bg{
+[data-theme="dark"] {
+  --bg: #171a23;
+  --bg-panel: #171a23;
+  --color-headings: white;
+  --color-text-opacity: rgba(255,255,255, .7);
+  --color-text: white;
+  --color-text-base: #161c2d;
+  --border: #ced4da;
+}
+
+[data-theme="dark"] .hero-bg{
   background-image: url('../assets/img/week\ 8\ image\ assets/hero-pattern.webp');
   background-repeat: none;
   background-position: center;

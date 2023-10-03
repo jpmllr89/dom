@@ -140,7 +140,7 @@ input:focus, textarea:focus{
   top: 25%;
   transition: .4s;
   z-index: 100;
-  transform: translateX(75%);
+  transform: translateX(100%);
 }
 
 .theme-panel.open{
@@ -177,6 +177,16 @@ input:focus, textarea:focus{
   color: white;
   border-bottom-left-radius: 10px;
   border-top-left-radius: 10px;
+}
+
+.theme-tab i{
+  font-size: 1rem;
+  transition: 0.4s;
+  pointer-events: none;
+}
+
+.theme-panel.open .theme-tab i{
+  transform: scaleX(-1);
 }
 
 .theme-body > span{
