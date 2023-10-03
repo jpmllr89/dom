@@ -132,6 +132,81 @@ input:focus, textarea:focus{
   outline: none;
 }
 
+/* Theme Panel Modal */
+
+.theme-panel{
+  position: fixed;
+  right: 0;
+  top: 25%;
+  transition: .4s;
+  z-index: 100;
+  transform: translateX(75%);
+}
+
+.theme-panel.open{
+  transform: translateX(0);
+}
+
+.theme-panel.open .switcher-btn{
+  transform: translateX(0);
+}
+
+.theme-panel.open .switcher-btn.active{
+  background-color: #ced4e7;
+}
+
+
+.theme-body{
+  background-color: #495fef;
+  color: white;
+  border: transparent;
+  max-width: 185px;
+  padding: 15px 13px;
+  text-align: center;
+  border-bottom-left-radius: 25px;
+  position: relative;
+}
+
+.theme-tab{
+  left: -18px;
+  position: absolute;
+  top: 0px;
+  padding: 8px 5px;
+  background-color: inherit;
+  border: inherit;
+  color: white;
+  border-bottom-left-radius: 10px;
+  border-top-left-radius: 10px;
+}
+
+.theme-body > span{
+  color: white;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: -0.09px;
+  line-height: 26px;
+  display: inline-flex;
+  padding-bottom: 8px;
+}
+
+.button-group{
+  border-radius: 33px;
+  background-color: white;
+  overflow: hidden;
+  display: flex;
+  max-width: 153px;
+}
+
+.button-group button{
+  background-color: transparent;
+  font-weight: 700;
+  border: none;
+  padding: 10px 20px;
+  font-size: 10px;
+  width: 50%;
+  letter-spacing: 1.4px;
+  text-transform: uppercase;
+}
 
 /* hero section */
 
@@ -142,6 +217,7 @@ input:focus, textarea:focus{
 .hero-text{
   text-align: center;
   margin-top: 5px;
+  padding: 5rem 0;
 }
 .hero-text i{
   font-size: 38px;
@@ -150,9 +226,9 @@ input:focus, textarea:focus{
   border-radius: 50%;
 }
 
-.hero-text a{
+/* .hero-text a{
   width: 20%;
   margin: 0 auto;
   border-radius: 10px;
-}
+} */
 
