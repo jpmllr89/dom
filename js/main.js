@@ -5,7 +5,7 @@ const switcherBtn = '.switcher-btn';
 const dark = 'dark';
 const light = 'light';
 const open = 'open';
-const active = '.active';
+const active = 'active';
 const root = document.documentElement;
 
 /* Theme */
@@ -15,8 +15,9 @@ const switcher = document.querySelectorAll(switcherBtn);
 const currentTheme = localStorage.getItem(theme);
 
 const setActive = (e, selector) => {
-  if (document.querySelector(`${selector}${active}`) !== null){
-    document.querySelector(`${selector}${active}`).classList.remove(active);
+  if (document.querySelector(`${selector}.${active}`) !== null){
+    document.querySelector(`${selector}.${active}`).classList.remove(active);
+    e.classList.add(active);
   }else{
     e.classList.add(active);
   }
