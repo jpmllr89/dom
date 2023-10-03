@@ -242,3 +242,32 @@ input:focus, textarea:focus{
   border-radius: 10px;
 } */
 
+/* Portfolio section */
+
+.nav-search label{
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+}
+
+.nav-search label i{
+  position: absolute;
+  right: 15px;
+}
+.search-input{
+  border: none;
+  border-radius: 50rem;
+  padding: 0.75rem 1.5rem;
+  background-color: #f1f3f5;
+}
+
+.search-input:focus{
+  outline: none;
+  border: #4dabf7 solid 1px;
+  box-shadow: inset 0px 1px 1px rgba(0, 0, 0, 0.0125), 0 0 8px rgba(34, 139, 230, 0.5);
+}
+
+.portfolio .nav-filter{
+  display: flex;
+  flex-direction: row;
+}

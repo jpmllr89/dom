@@ -24,3 +24,11 @@
   background-position: center;
   background-size: cover;
 }
+
+[data-theme="dark"] .portfolio i{
+  color:#161c2d;
+}
+
+[data-theme="dark"] .portfolio{
+  color: white;
+}

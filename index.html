@@ -42,91 +42,116 @@
         </div>
       </div>
     </div>
-  </main>
+
+    <section class="portfolio">
+      <div class="nav-search container">
+        <label for="search">
+          <input autocomplete="off" id="search" class="search-input" type="text" placeholder="Search here">
+          <i class="fas fa-search"></i>
+        </label>
+        <ul class="nav-filter ul-no-bullets">
+          <li class="filter-link">All Work</li>
+          <li class="filter-link">Web Development</li>
+          <li class="filter-link">App Development</li>
+          <li class="filter-link">UI Design</li>
+        </ul>
+      </div>
+      <div class="nav-showcase-panel">
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
+    </section>
 
 
   <!-- Modals -->
 
-  <div class="full-site-modal page-block" id="about" data-animation="zoomInOut">
-    <header class="modal-header">
-      <h3>About</h3>
-      <i data-close class="fas fa-times"></i>
-    </header>
-    <div class="modal-body">
-      <div class="img-wrapper">
-        <img src="assets/img/week 8 image assets/me.png" alt="">
+    <div class="full-site-modal page-block" id="about" data-animation="zoomInOut">
+      <header class="modal-header">
+        <h3>About</h3>
+        <i data-close class="fas fa-times"></i>
+      </header>
+      <div class="modal-body">
+        <div class="img-wrapper">
+          <img src="assets/img/week 8 image assets/me.png" alt="">
+        </div>
+        <div class="text-body">
+          <h2>Jesse Miller</h2>
+          <p>Text 1</p>
+          <p>Text 2</p>
+          <div class="email">
+            <h3>
+              Email Me:
+            </h3>
+            <a href="mailto:jpmllr89@gmail.com">jpmllr89@gmail.com</a>
+          </div>
+        </div>
       </div>
-      <div class="text-body">
-        <h2>Jesse Miller</h2>
-        <p>Text 1</p>
-        <p>Text 2</p>
-        <div class="email">
-          <h3>
-            Email Me:
-          </h3>
-          <a href="mailto:jpmllr89@gmail.com">jpmllr89@gmail.com</a>
-        </div>
+    </div>
+
+    <div class="full-site-modal page-block" id="contact" data-animation="zoomInOut">
+      <header class="modal-header">
+        <h3>Contact</h3>
+        <i data-close class="fas fa-times"></i>
+      </header>
+      <div class="modal-body">
+        <h2>Get in touch with me!</h2>
+        <form action="get">
+          <div class="block">
+            <div class="subfield">
+              <label for="fname">First Name:</label>
+              <div class="input-wrapper">
+                <input id="fname" type="text" placeholder="First Name">
+              </div>
+            </div>
+            <div class="subfield">
+              <label for="lname">Last Name:</label>
+              <div class="input-wrapper">
+                <input type="text" id="lname" placeholder="Last Name">
+              </div>
+            </div>
+          </div>
+          <div class="block">
+            <div class="subfield">
+              <label for="email">Email:</label>
+              <div class="input-wrapper">
+                <input type="email" id="email" placeholder="Email">
+              </div>
+            </div>
+          </div>
+          <div class="block">
+            <div class="subfield">
+              <label for="message">Message/Comment:</label>
+              <textarea name="" id="message" cols="30" rows="10"></textarea>
+            </div>
+          </div>
+          <div class="block">
+            <div class="button-field">
+              <button type="submit">Submit</button>
+            </div>
+          </div>
+        </form>
       </div>
     </div>
-  </div>
 
-  <div class="full-site-modal page-block" id="contact" data-animation="zoomInOut">
-    <header class="modal-header">
-      <h3>Contact</h3>
-      <i data-close class="fas fa-times"></i>
-    </header>
-    <div class="modal-body">
-      <h2>Get in touch with me!</h2>
-      <form action="get">
-        <div class="block">
-          <div class="subfield">
-            <label for="fname">First Name:</label>
-            <div class="input-wrapper">
-              <input id="fname" type="text" placeholder="First Name">
-            </div>
+    <div class="theme-panel">
+      <div class="theme-body">
+        <span>Change Theme</span>
+          <div class="button-group">
+            <button data-toggle="light" class="switcher-btn active">LIGHT</button>
+            <button data-toggle='dark' class="switcher-btn">DARK</button>
           </div>
-          <div class="subfield">
-            <label for="lname">Last Name:</label>
-            <div class="input-wrapper">
-              <input type="text" id="lname" placeholder="Last Name">
-            </div>
-          </div>
-        </div>
-        <div class="block">
-          <div class="subfield">
-            <label for="email">Email:</label>
-            <div class="input-wrapper">
-              <input type="email" id="email" placeholder="Email">
-            </div>
-          </div>
-        </div>
-        <div class="block">
-          <div class="subfield">
-            <label for="message">Message/Comment:</label>
-            <textarea name="" id="message" cols="30" rows="10"></textarea>
-          </div>
-        </div>
-        <div class="block">
-          <div class="button-field">
-            <button type="submit">Submit</button>
-          </div>
-        </div>
-      </form>
+        <button class="theme-tab">
+          <i class="fas fa-chevron-left"></i>
+        </button>
+      </div>
     </div>
-  </div>
-
-  <div class="theme-panel">
-    <div class="theme-body">
-      <span>Change Theme</span>
-        <div class="button-group">
-          <button data-toggle="light" class="switcher-btn active">LIGHT</button>
-          <button data-toggle='dark' class="switcher-btn">DARK</button>
-        </div>
-      <button class="theme-tab">
-        <i class="fas fa-chevron-left"></i>
-      </button>
-    </div>
-  </div>
+  </main>
 
 
   <script src="js/main.js"></script>
