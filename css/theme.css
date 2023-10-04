@@ -29,6 +29,6 @@
   color:#161c2d;
 }
 
-[data-theme="dark"] .portfolio{
+[data-theme="dark"] .portfolio .nav-filter{
   color: white;
 }

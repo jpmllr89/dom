@@ -28,6 +28,7 @@ font-size: 15px;
 line-height: 26px;
 text-transform: lowercase;
 cursor: pointer;
+color: var(--color-text);
 }
 
 /* About me modal */
@@ -270,4 +271,7 @@ input:focus, textarea:focus{
 .portfolio .nav-filter{
   display: flex;
   flex-direction: row;
+  gap: 20px;
+  margin-top: 1rem;
 }
+
