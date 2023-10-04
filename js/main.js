@@ -92,3 +92,27 @@ for(const el of closeModal){
     this.parentElement.parentElement.classList.remove(isVisible);
   });
 }
+
+// Portfolio
+
+const dataFilter = '[data-filter]';
+const filterLink = document.querySelectorAll(dataFilter);
+const portfolioData = '[data-item]';
+const portfolioItems = document.querySelectorAll(portfolioData);
+
+for (const e of filterLink){
+  e.addEventListener('click', function(){
+    setActive(e, '.filter-link');
+    const filter = this.dataset.filter;
+    portfolioItems.forEach((card) =>{
+      if(filter==='all'){
+        card.style.display = 'block';
+      } else if(card.dataset.item === filter){
+        card.style.display = 'block';
+      } else{
+        card.style.display = 'none';
+      }
+    });
+  });
+}
+
