@@ -270,8 +270,22 @@ input:focus, textarea:focus{
 
 .portfolio .nav-filter{
   display: flex;
+  flex-wrap: wrap;
   flex-direction: row;
-  gap: 20px;
-  margin-top: 1rem;
+  padding: 2rem 0;
 }
 
+.filter-link{
+  line-height: 1.6;
+  letter-spacing: 1.63px;
+  font-weight: 400;
+  padding: 0 1rem;
+}
+
+.filter-link:hover{
+  cursor:pointer;
+}
+
+.nav-filter .filter-link.active{
+  color: #495fef;
+}
