@@ -132,3 +132,95 @@ searchBox.addEventListener('keyup', (e) => {
 
 
 })
+
+
+//This below section is for an exercise, comment out later:
+const data = [
+  {
+    picture:'img/anenome.jpeg',
+    title:'Zoo / Wildlife',
+    caption:'LifeScience website',
+    attribute: {
+      name: "data-item",
+      value: "web"
+    }
+  },
+  {
+    picture: '../img/week 8 image assets/img1.jpg',
+    title:'Zoo / Wildlife',
+    caption:'LifeScience website',
+    attribute: {
+      name: "data-item",
+      value: "app"
+    }
+  },
+  {
+    picture:'../img/week 8 image assets/img2.jpg',
+    title:'Zoo / Wildlife',
+    caption:'LifeScience website',
+    attribute: {
+      name: "data-item",
+      value: "ui"
+    }
+  },
+  {
+    picture:'../img/week 8 image assets/img3.jpg',
+    title:'Zoo / Wildlife',
+    caption:'LifeScience website',
+    attribute: {
+      name: "data-item",
+      value: "app"
+    }
+  },
+  {
+    picture:'../img/week 8 image assets/img4.jpg',
+    title:'Zoo / Wildlife',
+    caption:'LifeScience website',
+    attribute: {
+      name: "data-item",
+      value: "web"
+    }
+  },
+  {
+    picture:'../img/week 8 image assets/img5.jpg',
+    title:'Zoo / Wildlife',
+    caption:'LifeScience website',
+    attribute: {
+      name: "data-item",
+      value: "app"
+    }
+  }
+]
+
+const portfolioPanel = document.querySelector('.portfolio-panel');
+const portfolioCard = '.portfolio-card';
+const portfolioCardBody = '.portfolio-card-body';
+const cardModal = '.card-modal';
+
+// for(let i = 0; i < data.length; i++){
+//   let card = document.createElement('div');
+//   card.classList.add(portfolioCard);
+//   card.setAttribute(data[i].attribute.name, data.attribute[i].value);
+//   let cardBody = document.createElement('div');
+//   cardBody.classList.add(portfolioCardBody);
+//   let img = document.createElement('img');
+//   img.src = data[i].picture;
+//   let link = document.createElement('a');
+//   link.classList.add(cardModal);
+//   link.innerHTML = `<div>${data[i].title}</div><h3>${data[i].caption}</h3>`
+// }
+
+for(let i = 0; i<data.length; i++){
+  let card = document.createElement('div');
+  card.classList.add(portfolioCard);
+  card.setAttribute(data[i].attribute.name, data.attribute[i].value);
+  card.innerHTML = 
+  `<div class="portfolio-card-body">
+    <img src=${data[i].picture} alt="portfolio icon">
+    <a class='card-modal' href="#">
+      <div>${data[i].title}</div>
+      <h3>${data[i].caption}</h3>
+    </a>
+  </div>`;
+  portfolioPanel.appendChild(card);
+}
