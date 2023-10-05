@@ -116,3 +116,19 @@ for (const e of filterLink){
   });
 }
 
+// Search bar logic
+
+const searchBox = document.querySelector('#search');
+
+searchBox.addEventListener('keyup', (e) => {
+  const searchInput = e.target.value.toLowerCase().trim();
+  portfolioItems.forEach((card) =>{
+    if(card.dataset.item.includes(searchInput)){
+      card.style.display = "block";
+    }else{
+      card.style.display = 'none';
+    }
+  })
+
+
+})
