@@ -1,7 +1,7 @@
 //This below section is for an exercise, comment out later:
 const data = [
   {
-    picture:"./assets/img/week 8 image assets/anenome.jpeg",
+    picture:"./assets/img/anenome.jpeg",
     title:'Zoo / Wildlife',
     caption:'LifeScience website',
     attribute: {
@@ -10,7 +10,7 @@ const data = [
     }
   },
   {
-    picture: './assets/img/week 8 image assets/img1.jpg',
+    picture: './assets/img/img1.jpg',
     title:'Zoo / Wildlife',
     caption:'LifeScience website',
     attribute: {
@@ -19,7 +19,7 @@ const data = [
     }
   },
   {
-    picture:'./assets/img/week 8 image assets/img2.jpg',
+    picture:'./assets/img/img2.jpg',
     title:'Zoo / Wildlife',
     caption:'LifeScience website',
     attribute: {
@@ -28,7 +28,7 @@ const data = [
     }
   },
   {
-    picture:'./assets/img/week 8 image assets/img3.jpg',
+    picture:'./assets/img/img3.jpg',
     title:'Zoo / Wildlife',
     caption:'LifeScience website',
     attribute: {
@@ -37,7 +37,7 @@ const data = [
     }
   },
   {
-    picture:'./assets/img/week 8 image assets/img4.jpg',
+    picture:'./assets/img/img4.jpg',
     title:'Zoo / Wildlife',
     caption:'LifeScience website',
     attribute: {
@@ -46,7 +46,7 @@ const data = [
     }
   },
   {
-    picture:'./assets/img/week 8 image assets/img5.jpg',
+    picture:'./assets/img/img5.jpg',
     title:'Zoo / Wildlife',
     caption:'LifeScience website',
     attribute: {
