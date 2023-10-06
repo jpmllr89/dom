@@ -145,82 +145,151 @@ document.addEventListener('keyup', (e) =>{
     document.querySelector('.modal.is-visible').classList.remove(isVisible);
   }
 })
+
+//Portfolio Grid cards
 //This below section is for an exercise, comment out later:
-// const data = [
-//   {
-//     picture:"./assets/img/anenome.jpeg",
-//     title:'Zoo / Wildlife',
-//     caption:'LifeScience website',
-//     attribute: {
-//       name: "data-item",
-//       value: "web"
-//     }
-//   },
-//   {
-//     picture: './assets/img/img1.jpg',
-//     title:'Zoo / Wildlife',
-//     caption:'LifeScience website',
-//     attribute: {
-//       name: "data-item",
-//       value: "app"
-//     }
-//   },
-//   {
-//     picture:'./assets/img/img2.jpg',
-//     title:'Zoo / Wildlife',
-//     caption:'LifeScience website',
-//     attribute: {
-//       name: "data-item",
-//       value: "ui"
-//     }
-//   },
-//   {
-//     picture:'./assets/img/img3.jpg',
-//     title:'Zoo / Wildlife',
-//     caption:'LifeScience website',
-//     attribute: {
-//       name: "data-item",
-//       value: "app"
-//     }
-//   },
-//   {
-//     picture:'./assets/img/img4.jpg',
-//     title:'Zoo / Wildlife',
-//     caption:'LifeScience website',
-//     attribute: {
-//       name: "data-item",
-//       value: "web"
-//     }
-//   },
-//   {
-//     picture:'./assets/img/img5.jpg',
-//     title:'Zoo / Wildlife',
-//     caption:'LifeScience website',
-//     attribute: {
-//       name: "data-item",
-//       value: "app"
-//     }
-//   }
-// ]
+const data = [
+  {
+    picture:"./assets/img/portfolio-1.jpg",
+    title:'Web Development',
+    caption:'Food Website',
+    attributes: [
+      {
+        name: "data-item",
+        value: "web"
+      },
+      {
+        name: "data-open",
+        value: "modal1"
+      }
+    ]
+  },
+  {
+    picture: './assets/img/portfolio-2.jpg',
+    title:'Web Development',
+    caption:'Crafts website',
+    attributes: [
+      {
+        name: "data-item",
+        value: "web"
+      },
+      {
+        name: "data-open",
+        value: "modal2"
+      }
+    ]
+  },
+  {
+    picture:'./assets/img/portfolio-3.jpg',
+    title:'Web Development',
+    caption:'Shopping website',
+    attributes: [
+      {
+        name: "data-item",
+        value: "web"
+      },
+      {
+        name: "data-open",
+        value: "modal3"
+      }
+    ]
+  },
+  {
+    picture:'./assets/img/portfolio-7.jpg',
+    title:'Web Development',
+    caption:'Skate Website',
+    attributes: [
+      {
+        name: "data-item",
+        value: "web"
+      },
+      {
+        name: "data-open",
+        value: "modal4"
+      }
+    ]
+  },
+  {
+    picture:'./assets/img/portfolio-5.jpg',
+    title:'App Development',
+    caption:'Dating App',
+    attributes: [
+      {
+        name: "data-item",
+        value: "app"
+      },
+      {
+        name: "data-open",
+        value: "modal5"
+      }
+    ]
+  },
+  {
+    picture:'./assets/img/portfolio-6.jpg',
+    title:'App Development',
+    caption:'Gaming App',
+    attributes: [
+      {
+        name: "data-item",
+        value: "app"
+      },
+      {
+        name: "data-open",
+        value: "modal6"
+      }
+    ]
+  },
+  {
+    picture:'./assets/img/portfolio-7.jpg',
+    title:'UI Design',
+    caption:'Cool Design',
+    attributes: [
+      {
+        name: "data-item",
+        value: "ui"
+      },
+      {
+        name: "data-open",
+        value: "modal7"
+      }
+    ]
+  },
+  {
+    picture:'./assets/img/portfolio-8.jpg',
+    title:'UI Design',
+    caption:'Masterpiece',
+    attributes: [
+      {
+        name: "data-item",
+        value: "ui"
+      },
+      {
+        name: "data-open",
+        value: "modal8"
+      }
+    ]
+  }
+]
 
-// const portfolioPanel = document.querySelector('.portfolio-panel');
-// const portfolioCard = 'portfolio-card';
-// const portfolioCardBody = 'portfolio-card-body';
-// const cardModal = 'card-modal';
+const portfolioPanel = document.querySelector('.portfolio-panel');
+const portfolioCard = 'portfolio-card';
+const portfolioCardBody = 'portfolio-card-body';
+const cardModal = 'card-modal';
 
 
 
-// for(let i = 0; i< data.length; i++){
-//   let card = document.createElement('div');
-//   card.classList.add(portfolioCard);
-//   card.setAttribute(data[i].attribute.name, data[i].attribute.value);
-//   card.innerHTML =
-//   `<div class="portfolio-card-body">
-//     <img src=${data[i].picture} alt="portfolio icon">
-//     <a class='card-modal' href="#">
-//       <div>${data[i].title}</div>
-//       <h3>${data[i].caption}</h3>
-//     </a>
-//   </div>`;
-//   portfolioPanel.appendChild(card);
-// }
+for(let i = 0; i< data.length; i++){
+  let card = document.createElement('div');
+  card.classList.add(portfolioCard);
+  card.setAttribute(data[i].attributes[0].name, data[i].attributes[0].value);
+  card.setAttribute(data[i].attributes[1].name, data[i].attributes[1].value);
+  card.innerHTML =
+  `<div class="portfolio-card-body">
+    <img src=${data[i].picture} alt="portfolio icon">
+    <div class='card-modal'>
+      <div>${data[i].title}</div>
+      <h3>${data[i].caption}</h3>
+    </div>
+  </div>`;
+  portfolioPanel.appendChild(card);
+}
