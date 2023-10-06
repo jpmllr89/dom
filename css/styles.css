@@ -31,8 +31,17 @@ cursor: pointer;
 color: var(--color-text);
 }
 
-/* About me modal */
+/* Modals*/
 
+.modal{
+  display: flex;
+  justify-content: center;
+  /* width: 65%; */
+  align-items: center;
+  background-color: rgba(0,0,0,.8);
+}
+
+.modal,
 .full-site-modal{
   position: fixed;
   top: 0;
@@ -43,6 +52,15 @@ color: var(--color-text);
   transition: all 0.35s ease-in;
   visibility: hidden;
   opacity: 0;
+  z-index: 1000;
+}
+.modal-dialog{
+  max-width: 800px;
+  max-height: 80vh;
+  background-color: var(--bg);
+  padding: 1rem;
+  border-radius: 8px;
+  cursor:default;
 }
 
 .modal-header{
@@ -51,6 +69,7 @@ color: var(--color-text);
   justify-content: space-between;
   padding: 0 20px;
 }
+
 
 .modal-header i.fa-times{
   transition: all .5s ease-in;
@@ -62,7 +81,8 @@ color: var(--color-text);
   cursor: pointer;
 }
 
-.full-site-modal.is-visible{
+.full-site-modal.is-visible,
+.modal.is-visible{
   visibility: visible;
   opacity: 1;
 }
@@ -70,22 +90,51 @@ color: var(--color-text);
 .modal-body{
   display: flex;
   flex-flow: row nowrap;
-  gap: 150px;
+  /* gap: 50px; */
   justify-content: center;
   align-items: center;
 }
 .modal-body .img-wrapper img{
   width: 300px;
   height: 300px;
-  border-radius: 50rem;
+  border-radius: 8px;
+  object-fit: cover;
+}
+
+.modal-body .img-wrapper{
+  margin-right: 30px;
 }
 
 [data-animation="zoomInOut"].full-site-modal{
   transform: scale(0.2);
 }
 
+
 [data-animation="zoomInOut"].full-site-modal.is-visible{
   transform: scale(1);
+}
+
+[data-animation="slideDown"].is-visible .modal-dialog{
+  transform: none;
+}
+
+[data-animation="slideDown"] .modal-dialog{
+  opacity: 0;
+  transition: all .5s;
+}
+
+[data-animation="slideDown"].is-visible .modal-dialog{
+  opacity: 1; 
+  transition-delay: .2s;
+}
+
+[data-animation="slideDown"] .modal-dialog{
+  transform: translateY(-100%);
+}
+
+[data-animation="slideDown"].is-visible .modal-dialog{
+  opacity: 1; 
+  transition-delay: .2s;
 }
 
 
@@ -140,7 +189,7 @@ input:focus, textarea:focus{
   right: 0;
   top: 25%;
   transition: .4s;
-  z-index: 100;
+  z-index: 1001;
   transform: translateX(100%);
 }
 

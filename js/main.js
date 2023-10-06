@@ -89,7 +89,7 @@ for(const el of openModal){
 
 for(const el of closeModal){
   el.addEventListener('click', function(){
-    this.parentElement.parentElement.classList.remove(isVisible);
+    this.parentElement.parentElement.parentElement.classList.remove(isVisible);
   });
 }
 
@@ -133,7 +133,18 @@ searchBox.addEventListener('keyup', (e) => {
 
 })
 
+// Individual Modal
+document.addEventListener('click', (e) =>{
+  if(e.target === document.querySelector('.modal.is-visible')){
+    document.querySelector('.modal.is-visible').classList.remove(isVisible);
+  }
+})
 
+document.addEventListener('keyup', (e) =>{
+  if(e.key === 'Escape'){
+    document.querySelector('.modal.is-visible').classList.remove(isVisible);
+  }
+})
 //This below section is for an exercise, comment out later:
 // const data = [
 //   {

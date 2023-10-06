@@ -58,7 +58,7 @@
       </div>
       <div class="portfolio-panel">
 
-        <div class="portfolio-card" data-item="web">
+        <div class="portfolio-card" data-item="web" data-open="web-1">
           <div class="portfolio-card-body">
             <img src="./assets/img/portfolio-1.jpg" alt="portfolio icon">
             <a class='card-modal' href="#">
@@ -145,70 +145,74 @@
   <!-- Modals -->
 
     <div class="full-site-modal page-block" id="about" data-animation="zoomInOut">
-      <header class="modal-header">
-        <h3>About</h3>
-        <i data-close class="fas fa-times"></i>
-      </header>
-      <div class="modal-body">
-        <div class="img-wrapper">
-          <img src="assets/img/week 8 image assets/me.png" alt="">
-        </div>
-        <div class="text-body">
-          <h2>Jesse Miller</h2>
-          <p>Text 1</p>
-          <p>Text 2</p>
-          <div class="email">
-            <h3>
-              Email Me:
-            </h3>
-            <a href="mailto:jpmllr89@gmail.com">jpmllr89@gmail.com</a>
+      <div class="container-fluid">
+        <header class="modal-header">
+          <h3>About</h3>
+          <i data-close class="fas fa-times"></i>
+        </header>
+        <div class="modal-body">
+          <div class="img-wrapper">
+            <img src="assets/img/me.png" alt="">
+          </div>
+          <div class="text-body">
+            <h2>Jesse Miller</h2>
+            <p>Text 1</p>
+            <p>Text 2</p>
+            <div class="email">
+              <h3>
+                Email Me:
+              </h3>
+              <a href="mailto:jpmllr89@gmail.com">jpmllr89@gmail.com</a>
+            </div>
           </div>
         </div>
       </div>
     </div>
 
     <div class="full-site-modal page-block" id="contact" data-animation="zoomInOut">
-      <header class="modal-header">
-        <h3>Contact</h3>
-        <i data-close class="fas fa-times"></i>
-      </header>
-      <div class="modal-body">
-        <h2>Get in touch with me!</h2>
-        <form action="get">
-          <div class="block">
-            <div class="subfield">
-              <label for="fname">First Name:</label>
-              <div class="input-wrapper">
-                <input id="fname" type="text" placeholder="First Name">
+      <div class="container-fluid">
+        <header class="modal-header">
+          <h3>Contact</h3>
+          <i data-close class="fas fa-times"></i>
+        </header>
+        <div class="modal-body">
+          <h2>Get in touch with me!</h2>
+          <form action="get">
+            <div class="block">
+              <div class="subfield">
+                <label for="fname">First Name:</label>
+                <div class="input-wrapper">
+                  <input id="fname" type="text" placeholder="First Name">
+                </div>
+              </div>
+              <div class="subfield">
+                <label for="lname">Last Name:</label>
+                <div class="input-wrapper">
+                  <input type="text" id="lname" placeholder="Last Name">
+                </div>
               </div>
             </div>
-            <div class="subfield">
-              <label for="lname">Last Name:</label>
-              <div class="input-wrapper">
-                <input type="text" id="lname" placeholder="Last Name">
+            <div class="block">
+              <div class="subfield">
+                <label for="email">Email:</label>
+                <div class="input-wrapper">
+                  <input type="email" id="email" placeholder="Email">
+                </div>
               </div>
             </div>
-          </div>
-          <div class="block">
-            <div class="subfield">
-              <label for="email">Email:</label>
-              <div class="input-wrapper">
-                <input type="email" id="email" placeholder="Email">
+            <div class="block">
+              <div class="subfield">
+                <label for="message">Message/Comment:</label>
+                <textarea name="" id="message" cols="30" rows="10"></textarea>
               </div>
             </div>
-          </div>
-          <div class="block">
-            <div class="subfield">
-              <label for="message">Message/Comment:</label>
-              <textarea name="" id="message" cols="30" rows="10"></textarea>
+            <div class="block">
+              <div class="button-field">
+                <button type="submit">Submit</button>
+              </div>
             </div>
-          </div>
-          <div class="block">
-            <div class="button-field">
-              <button type="submit">Submit</button>
-            </div>
-          </div>
-        </form>
+          </form>
+        </div>
       </div>
     </div>
 
@@ -222,6 +226,25 @@
         <button class="theme-tab">
           <i class="fas fa-chevron-left"></i>
         </button>
+      </div>
+    </div>
+    <!-- Popup Modals -->
+    <div class="modal" id="web-1" data-animation="slideDown">
+      <div class="modal-dialog">
+        <header class="modal-header">
+          <h3>Web Project</h3>
+          <i data-close class="fas fa-times"></i>
+        </header>
+        <div class="modal-body">
+          <div class="img-wrapper">
+            <img src="assets/img/portfolio-1.jpg" alt="portfolio image">
+          </div>
+          <div class="text-body">
+            <p><strong>My first awesome Website</strong></p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Enim corrupti repellendus sunt minus, ipsam cumque perspiciatis. Obcaecati, sit eligendi illo ipsa exercitationem modi cumque repellendus eos aliquam magni reiciendis nam?</p>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ad voluptate aliquid quas facere commodi temporibus error numquam nam est ut aperiam cum ratione porro qui, eveniet sequi provident blanditiis. Harum.</p>
+          </div>
+        </div>
       </div>
     </div>
   </main>
