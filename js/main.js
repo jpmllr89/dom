@@ -293,3 +293,100 @@ for(let i = 0; i< data.length; i++){
   </div>`;
   portfolioPanel.appendChild(card);
 }
+
+// Pop-up modal portfolio cards
+const dataModals = [
+  {
+    id: "modal1",
+    h3: "Web Development",
+    img: "assets/img/portfolio-1.jpg",
+    strongParagraph: "My first Awesome Website",
+    firstParagrph: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Enim corrupti repellendus sunt minus, ipsam cumque perspiciatis. Obcaecati, sit eligendi illo ipsa exercitationem modi cumque repellendus eos aliquam magni reiciendis nam?",
+    secondParagrph: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Enim corrupti repellendus sunt minus, ipsam cumque perspiciatis. Obcaecati, sit eligendi illo ipsa exercitationem modi cumque repellendus eos aliquam magni reiciendis nam?"
+  },
+  {
+    id: "modal2",
+    h3: "Web Development",
+    img: "assets/img/portfolio-2.jpg",
+    strongParagraph: "My first Awesome Website",
+    firstParagrph: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Enim corrupti repellendus sunt minus, ipsam cumque perspiciatis. Obcaecati, sit eligendi illo ipsa exercitationem modi cumque repellendus eos aliquam magni reiciendis nam?",
+    secondParagrph: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Enim corrupti repellendus sunt minus, ipsam cumque perspiciatis. Obcaecati, sit eligendi illo ipsa exercitationem modi cumque repellendus eos aliquam magni reiciendis nam?"
+  },
+  {
+    id: "modal3",
+    h3: "Web Development",
+    img: "assets/img/portfolio-3.jpg",
+    strongParagraph: "My first Awesome Website",
+    firstParagrph: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Enim corrupti repellendus sunt minus, ipsam cumque perspiciatis. Obcaecati, sit eligendi illo ipsa exercitationem modi cumque repellendus eos aliquam magni reiciendis nam?",
+    secondParagrph: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Enim corrupti repellendus sunt minus, ipsam cumque perspiciatis. Obcaecati, sit eligendi illo ipsa exercitationem modi cumque repellendus eos aliquam magni reiciendis nam?"
+  },
+  {
+    id: "modal4",
+    h3: "Web Development",
+    img: "assets/img/portfolio-7.jpg",
+    strongParagraph: "My first Awesome Website",
+    firstParagrph: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Enim corrupti repellendus sunt minus, ipsam cumque perspiciatis. Obcaecati, sit eligendi illo ipsa exercitationem modi cumque repellendus eos aliquam magni reiciendis nam?",
+    secondParagrph: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Enim corrupti repellendus sunt minus, ipsam cumque perspiciatis. Obcaecati, sit eligendi illo ipsa exercitationem modi cumque repellendus eos aliquam magni reiciendis nam?"
+  },
+  {
+    id: "modal5",
+    h3: "App Development",
+    img: "assets/img/portfolio-5.jpg",
+    strongParagraph: "My first Awesome Website",
+    firstParagrph: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Enim corrupti repellendus sunt minus, ipsam cumque perspiciatis. Obcaecati, sit eligendi illo ipsa exercitationem modi cumque repellendus eos aliquam magni reiciendis nam?",
+    secondParagrph: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Enim corrupti repellendus sunt minus, ipsam cumque perspiciatis. Obcaecati, sit eligendi illo ipsa exercitationem modi cumque repellendus eos aliquam magni reiciendis nam?"
+  },
+  {
+    id: "modal6",
+    h3: "App Development",
+    img: "assets/img/portfolio-6.jpg",
+    strongParagraph: "My first Awesome Website",
+    firstParagrph: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Enim corrupti repellendus sunt minus, ipsam cumque perspiciatis. Obcaecati, sit eligendi illo ipsa exercitationem modi cumque repellendus eos aliquam magni reiciendis nam?",
+    secondParagrph: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Enim corrupti repellendus sunt minus, ipsam cumque perspiciatis. Obcaecati, sit eligendi illo ipsa exercitationem modi cumque repellendus eos aliquam magni reiciendis nam?"
+  },
+  {
+    id: "modal7",
+    h3: "UI Development",
+    img: "assets/img/portfolio-7.jpg",
+    strongParagraph: "My first Awesome Website",
+    firstParagrph: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Enim corrupti repellendus sunt minus, ipsam cumque perspiciatis. Obcaecati, sit eligendi illo ipsa exercitationem modi cumque repellendus eos aliquam magni reiciendis nam?",
+    secondParagrph: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Enim corrupti repellendus sunt minus, ipsam cumque perspiciatis. Obcaecati, sit eligendi illo ipsa exercitationem modi cumque repellendus eos aliquam magni reiciendis nam?"
+  },
+  {
+    id: "modal8",
+    h3: "UI Development",
+    img: "assets/img/portfolio-8.jpg",
+    strongParagraph: "My first Awesome Website",
+    firstParagrph: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Enim corrupti repellendus sunt minus, ipsam cumque perspiciatis. Obcaecati, sit eligendi illo ipsa exercitationem modi cumque repellendus eos aliquam magni reiciendis nam?",
+    secondParagrph: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Enim corrupti repellendus sunt minus, ipsam cumque perspiciatis. Obcaecati, sit eligendi illo ipsa exercitationem modi cumque repellendus eos aliquam magni reiciendis nam?"
+  },
+
+]
+
+const main = document.querySelector('.site-wrapper');
+const modal = 'modal';
+
+for(let i = 0; i< dataModals.length; i++){
+  let modalElement = document.createElement('div');
+  modalElement.classList.add(modal);
+  modalElement.setAttribute('id', dataModals[i].id);
+  modalElement.setAttribute('data-animation', "slideDown");
+  modalElement.innerHTML =
+  `<div class="modal-dialog">
+    <header class="modal-header">
+      <h3>${dataModals[i].h3}</h3>
+      <i data-close class="fas fa-times"></i>
+    </header>
+    <div class="modal-body">
+      <div class="img-wrapper">
+        <img src=${data[i].img} alt="portfolio icon">
+      </div>
+      <div class="text-body">
+        <p>${dataModals.strongParagraph}<p>
+        <p>${dataModals.firstParagraph}<p>
+        <p>${dataModals.secondParagraph}<p>
+      </div>
+    </div>
+  </div>`;
+  main.appendChild(modalElement);
+}
