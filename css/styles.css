@@ -57,8 +57,10 @@ color: var(--color-text);
 .modal-dialog{
   max-width: 800px;
   max-height: 80vh;
-  background-color: var(--bg);
-  padding: 1rem;
+  background-color: var(--bg-panel);
+  color: var(--color-text-base);
+  overflow: hidden;
+  padding: 1.25rem 1.85rem;
   border-radius: 8px;
   cursor:default;
 }
