@@ -65,9 +65,6 @@ for(const el of switcher){
   });
 }
 
-// Portfolio Cards
-
-
 /*Modal*/
 
 const modalOpen = "[data-open]";

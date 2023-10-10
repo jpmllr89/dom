@@ -10,7 +10,7 @@
 
 [data-theme="dark"] {
   --bg: #171a23;
-  --bg-panel: #171a23;
+  --bg-panel: #ced4da;
   --color-headings: white;
   --color-text-opacity: rgba(255,255,255, .7);
   --color-text: white;
