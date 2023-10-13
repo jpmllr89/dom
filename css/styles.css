@@ -449,6 +449,7 @@ input:focus, textarea:focus{
   justify-content: center;
   /* position: relative; */
   height: 250px;
+  margin-top: 50px;
 }
 
 .carousel-controls {
