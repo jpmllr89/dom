@@ -6,10 +6,6 @@ let next = current < slides.length -1 ? current +1 : 0;
 let prev = current > 0 ? current -1 : slides.length -1;
 
 // create event listener for the buttons
-
-buttons[0].addEventListener('click' e => {
-
-});
 // decide how to call prev/next
 //update variables
 // current index = newIndex
@@ -18,15 +14,21 @@ buttons[0].addEventListener('click' e => {
 
 //update css classes
 
+const goToNum = (num) => {
+  current = num;
+  next = current < slides.length -1 ? current +1 : 0; 
+  prev = current > 0 ? current -1 : slides.length -1;
+  console.log(current);
+}
 
 const goToNext = () => {
-
+  current < slides.length -1 ? goToNum(current +1) : goToNum(0);
 };
 
 const goToPrev = () =>{
-
+  current > 0 ? goToNum(current -1) : goToNum(slides.length -1);
 }
 
-for(let i in buttons){
+for(let i = 0; i< buttons.length; i++){
   buttons[i].addEventListener('click', () => i === 0 ? goToPrev() : goToNext());
 }
