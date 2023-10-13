@@ -83,6 +83,10 @@ color: var(--color-text);
   cursor: pointer;
 }
 
+.modal-header h3{
+  font-size: 32px;
+}
+
 .full-site-modal.is-visible,
 .modal.is-visible{
   visibility: visible;
