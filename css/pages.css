@@ -1,3 +1,51 @@
 .page-block{
   background-color: var(--bg);
 }
+
+#contact .modal-body{
+  flex-direction: column;
+  justify-content: start;
+  gap: 20px;
+  padding-top: 30px;
+}
+
+#contact .modal-body form{
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+#contact .modal-body form .block{
+  display: flex;
+  flex-direction: row;
+  gap: 40px;
+}
+
+#contact .modal-body form .block .subfield{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+
+/* About modal */
+#about .modal-body{
+  margin-top: 5rem;
+  padding: 2rem;
+  align-items: start;
+  flex-wrap: wrap;
+}
+#about .img-wrapper{
+  flex: 1;
+}
+#about .img-wrapper img{
+  border-radius: 50rem;
+}
+
+#about .text-body{
+  flex: 1;
+}
+
+#about .text-body p, #about .text-body div{
+  font-size: 1.2rem;
+} 

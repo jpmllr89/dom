@@ -95,6 +95,7 @@ color: var(--color-text);
   /* gap: 50px; */
   justify-content: center;
   align-items: center;
+  flex: 1;
 }
 .modal-body .img-wrapper img{
   width: 300px;
@@ -141,31 +142,6 @@ color: var(--color-text);
 
 
 /* Contact Modal */
-#contact .modal-body{
-  flex-direction: column;
-  justify-content: start;
-  gap: 20px;
-  padding-top: 30px;
-}
-
-#contact .modal-body form{
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-}
-
-#contact .modal-body form .block{
-  display: flex;
-  flex-direction: row;
-  gap: 40px;
-}
-
-#contact .modal-body form .block .subfield{
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-}
-
 .subfield label{
   font-size: 18px;
   padding: 5px 0;
