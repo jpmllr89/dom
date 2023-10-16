@@ -7,6 +7,7 @@
   justify-content: start;
   gap: 20px;
   padding-top: 30px;
+  align-items: start;
 }
 
 #contact .modal-body form{
@@ -39,8 +40,8 @@
 
 /* About modal */
 #about .modal-body{
-  margin-top: 5rem;
-  padding: 2rem;
+  margin-top: 1rem;
+  padding: 0 2rem;
   align-items: center;
   flex-wrap: wrap;
 }
@@ -56,11 +57,16 @@
 
 #about .text-body{
   flex: 1;
-  font-size: 2rem;
+  /* font-size: 2rem; */
+}
+
+#about .text-body h2{
+  font-size: 36px;
 }
 
 #about .text-body p, #about .text-body div{
-  font-size: 1.2rem;
+  font-size: 1rem;
+  margin: 5px 0;
 } 
 
 
@@ -80,7 +86,7 @@
   width: 10rem;
 }
 .marquee:before{
-  left: 100px;
+  left: 0;
   background: linear-gradient(to right, var(--bg) 0%, transparent 100%);
 }
 .marquee:after{
@@ -92,6 +98,7 @@
   display: flex;
   height: 100%;
   width: 100%;
+  animation: scrolling var(--marquee-animation-dur) linear infinite;
 }
 
 #about .marquee-content li{
@@ -103,4 +110,39 @@
   white-space: nowrap;
   flex-shrink: 0;
   font-size: calc(var(--marquee-height) * 3 / 4);
+}
+
+@keyframes scrolling{
+  0%{
+    transform: translateX(0);
+  }
+  100%{
+    transform: translateX(calc(-1 * var(--marquee-elm-width) * var(--marquee-elms)));
+  }
+}
+
+@media (max-width: 991px){
+  #about .img-wrapper, #about .about-text{
+    flex: initial;
+    margin: 0 auto;
+  }
+  #about .text-body{
+    text-align: center;
+  }
+  .modal-header h3{
+    font-size: 22px;
+  }
+  .modal-body{
+    margin: 0;
+  }
+}
+
+@media (max-width: 768px){
+  .marquee:after, .marquee:before{
+    width: 5rem;
+  }
+  :root{
+    --marquee-width: 100%;
+    --marquee-elms-displayed: 3;
+  }
 }

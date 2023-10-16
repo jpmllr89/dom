@@ -30,7 +30,7 @@
     </header>
 
     <!-- hero section -->
-    <div class="hero hero-bg">
+    <section class="hero hero-bg">
       <div class="container">
         <div class="hero-text">
           <i class="fa fa-code"></i>
@@ -41,7 +41,7 @@
           <a href="" class="btn btn-primary round-pill" data-open="contact">LET'S TALK NOW</a>
         </div>
       </div>
-    </div>
+    </section>
 
     <section class="portfolio">
       <div class="nav-search container">
@@ -135,7 +135,7 @@
         </header>
         <div class="modal-body">
           <div class="img-wrapper">
-            <img src="assets/img/me.png" alt="">
+            <img src="assets/img/img1.jpg" alt="">
           </div>
           <div class="text-body">
             <h2>Jesse Miller</h2>
@@ -172,16 +172,15 @@
         </header>
         <div class="modal-body">
           <h2>Get in touch with me!</h2>
+          <p>I will respond within 48 hours</p>
           <form action="get">
             <div class="block">
               <div class="subfield">
-                <label for="fname">First Name:</label>
                 <div class="input-wrapper">
                   <input id="fname" type="text" placeholder="First Name">
                 </div>
               </div>
               <div class="subfield">
-                <label for="lname">Last Name:</label>
                 <div class="input-wrapper">
                   <input type="text" id="lname" placeholder="Last Name">
                 </div>
@@ -189,7 +188,6 @@
             </div>
             <div class="block">
               <div class="subfield">
-                <label for="email">Email:</label>
                 <div class="input-wrapper">
                   <input type="email" id="email" placeholder="Email">
                 </div>
@@ -197,13 +195,21 @@
             </div>
             <div class="block">
               <div class="subfield">
-                <label for="message">Message/Comment:</label>
-                <textarea name="" id="message" cols="30" rows="10"></textarea>
+                <div class="input-wrapper">
+                  <input type="text" placeholder="Subject">
+                </div>
+              </div>
+            </div>
+            <div class="block">
+              <div class="subfield">
+                <div class="input-wrapper">
+                  <textarea name="" id="message" cols="30" rows="5" placeholder="write your message"></textarea>
+                </div>
               </div>
             </div>
             <div class="block">
               <div class="button-field">
-                <button class="btn" type="submit">Submit</button>
+                <button class="btn btn-primary round-pill" type="submit">Send</button>
               </div>
             </div>
           </form>
@@ -228,5 +234,6 @@
   <script src="js/data.js"></script>
   <script src="js/main.js"></script>
   <script src="js/carousel.js"></script>
+  <script src="js/marquee.js"></script>
 </body>
 </html>

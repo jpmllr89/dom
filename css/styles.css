@@ -52,7 +52,7 @@ color: var(--color-text);
   transition: all 0.35s ease-in;
   visibility: hidden;
   opacity: 0;
-  z-index: 1000;
+  z-index: 100;
 }
 .modal-dialog{
   max-width: 800px;
@@ -70,6 +70,7 @@ color: var(--color-text);
   padding-bottom: 1rem;
   justify-content: space-between;
   padding: 0 20px;
+  align-items: center
 }
 
 
@@ -102,8 +103,8 @@ color: var(--color-text);
   flex: 1;
 }
 .modal-body .img-wrapper img{
-  width: 300px;
-  height: 300px;
+  width: 200px;
+  height: 200px;
   border-radius: 8px;
   object-fit: cover;
 }
@@ -151,15 +152,19 @@ color: var(--color-text);
   padding: 5px 0;
 }
 
-.subfield input{
+.subfield input, .subfield textarea{
   padding: 10px;
   border: none;
+  background-color: transparent;
+}
+
+.subfield textarea{
+  resize: none;
 }
 
 .input-wrapper{
   border-bottom: 1px solid var(--color-text);
 }
-
 input:focus, textarea:focus{
   outline: none;
 }
@@ -254,6 +259,7 @@ input:focus, textarea:focus{
 
 .hero{
   height: 500px;
+  display: block;
 }
 
 .hero-text{
@@ -275,17 +281,27 @@ input:focus, textarea:focus{
 } */
 
 /* Portfolio section */
+.portfolio{
+  margin-top: 100px;
+}
+.nav-search{
+  display: flex;
+  flex-direction: column;
 
+}
 .nav-search label{
   position: relative;
   display: inline-flex;
   align-items: center;
+  width: fit-content;
 }
 
 .nav-search label i{
   position: absolute;
   right: 15px;
 }
+
+
 .search-input{
   border: none;
   border-radius: 50rem;
@@ -298,7 +314,10 @@ input:focus, textarea:focus{
   border: #4dabf7 solid 1px;
   box-shadow: inset 0px 1px 1px rgba(0, 0, 0, 0.0125), 0 0 8px rgba(34, 139, 230, 0.5);
 }
-
+.portfolio{
+  display:flex;
+  flex-direction: column;
+}
 .portfolio .nav-filter{
   display: flex;
   flex-wrap: wrap;
@@ -507,4 +526,24 @@ input:focus, textarea:focus{
 .testimonial-carousel-item.next{
   transform: translateX(75%);
   opacity: .25;
+}
+
+@media (max-width: 375px){
+  .hero{
+    margin-bottom: 200px;
+    height: 700px;
+  }
+  p.sub-header{
+    margin-bottom: none;
+  }
+}
+
+@media (max-width: 500px){
+  .nav-search, .nav-filter{
+    align-items: center;
+  }
+
+  .nav-filter{
+    justify-content: center;
+  }
 }

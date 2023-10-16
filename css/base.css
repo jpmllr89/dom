@@ -1,7 +1,8 @@
 :root{
   --marquee-width: 80vw;
-  --marquee-height: 15vh;
+  --marquee-height: 22vh;
   --marquee-elms-displayed: 5;
+  --marquee-elms: 8;
   --marquee-elm-width: calc(var(--marquee-width) / var(--marquee-elms-displayed));
   --marquee-animation-dur: calc(var(--marquee-elms) * 3s);
 }
@@ -120,6 +121,5 @@ button:not(:disabled):not(.disabled){
   font-size: 1.3125rem;
   line-height: 1.5;
   padding-top: 1.25rem;
-  padding-bottom: 1.78rem;
 }
 
